@@ -47,7 +47,7 @@ function App() {
             progressTask = "in_progress";
             progressClass = "status-in-progress";
           }
-
+          // write list in page
           return (
             <ul key={index}>
               <li>
@@ -73,6 +73,7 @@ function App() {
             progressClass = "status-complete";
           }
 
+          // write list in page
           return (
             <ul key={index}>
               <li>
