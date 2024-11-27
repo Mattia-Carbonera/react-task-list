@@ -71,6 +71,6 @@ const tasks = [
   },
 ];
 
-console.log(tasks);
+// console.log(tasks);
 
 export default tasks;
