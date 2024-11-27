@@ -36,19 +36,23 @@ function App() {
         {currentTask.map((task, index) => {
           // check progress status
           let progressTask;
+          let progressClass;
           if (task.state == "completed") {
             progressTask = "completed";
+            progressClass = "status-complete";
           } else if (task.state == "backlog") {
             progressTask = "backlog";
+            progressClass = "status-backlog";
           } else if (task.state == "in_progress") {
             progressTask = "in_progress";
+            progressClass = "status-in-progress";
           }
 
           return (
             <ul key={index}>
               <li>
                 {task.title}
-                <span className="progress-status">{progressTask}</span>
+                <span className={progressClass}>{progressTask}</span>
               </li>
               <li>priority: {task.priority}</li>
               <li>Est. time: {task.estimatedTime}</li>
@@ -63,19 +67,17 @@ function App() {
         {completedTask.map((task, index) => {
           // check progress status
           let progressTask;
+          let progressClass;
           if (task.state == "completed") {
             progressTask = "completed";
-          } else if (task.state == "backlog") {
-            progressTask = "backlog";
-          } else if (task.state == "in_progress") {
-            progressTask = "in_progress";
+            progressClass = "status-complete";
           }
 
           return (
             <ul key={index}>
               <li>
                 {task.title}
-                <span className="progress-status">{progressTask}</span>
+                <span className={progressClass}>{progressTask}</span>
               </li>
               <li>priority: {task.priority}</li>
               <li>Est. time: {task.estimatedTime}</li>

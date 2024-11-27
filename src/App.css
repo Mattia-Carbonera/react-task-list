@@ -29,7 +29,22 @@ ul li:first-child {
   margin: 2rem;
 }
 
-.progress-status {
+.status-complete {
+  margin: 0 1rem;
+  padding: 0.5rem;
+
+  background-color: green;
+}
+
+.status-backlog {
+  margin: 0 1rem;
+  padding: 0.5rem;
+
+  background-color: red;
+  color: white;
+}
+
+.status-in-progress {
   margin: 0 1rem;
   padding: 0.5rem;
 
