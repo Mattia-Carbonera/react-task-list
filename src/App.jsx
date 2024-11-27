@@ -30,33 +30,36 @@ function App() {
   return (
     <>
       <h1>Task Manager</h1>
+      <div className="container">
+        <h2>Current Task ({currentTaskNum})</h2>
 
-      <h2>Current Task ({currentTaskNum})</h2>
+        {currentTask.map((task, index) => {
+          return (
+            <ul key={index}>
+              <li>{task.title}</li>
+              <li>priority: {task.priority}</li>
+              <li>Est. time: {task.estimatedTime}</li>
+            </ul>
+          );
+        })}
 
-      {currentTask.map((task, index) => {
-        return (
-          <ul key={index}>
-            <li>{task.title}</li>
-            <li>priority: {task.priority}</li>
-            <li>Est. time: {task.estimatedTime}</li>
-          </ul>
-        );
-      })}
+        <hr />
 
-      <h2>Completed Task ({completedTuskNum})</h2>
+        <h2>Completed Task ({completedTuskNum})</h2>
 
-      {completedTask.map((task, index) => {
-        return (
-          <ul key={index}>
-            <li>{task.title}</li>
-            <li>priority: {task.priority}</li>
-            <li>Est. time: {task.estimatedTime}</li>
-          </ul>
-        );
-      })}
+        {completedTask.map((task, index) => {
+          return (
+            <ul key={index}>
+              <li>{task.title}</li>
+              <li>priority: {task.priority}</li>
+              <li>Est. time: {task.estimatedTime}</li>
+            </ul>
+          );
+        })}
+      </div>
     </>
   );
 }
-console.log(tasks);
+// console.log(tasks);
 
 export default App;
